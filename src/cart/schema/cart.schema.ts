@@ -9,14 +9,6 @@ export type CartDocument = CartModel & Document;
   collection: 'cart',
 })
 export class CartModel {
-  @Prop({
-    type: String,
-    default: function genUUID() {
-      return uuidv4();
-    },
-  })
-  id: string;
-
   @Prop({ type: String })
   productId: string;
 
